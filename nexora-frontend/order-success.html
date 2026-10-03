@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed — NEXORA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo"><span class="logo__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect class="logo__icon-bg" x="1.5" y="1.5" width="37" height="37" rx="11" stroke-width="1.5"/><path class="logo__icon-n" d="M13 28.5V11.5h2.9l7.4 12.6V11.5H26.5v17H23.6L16.2 15.9v12.6H13z"/></svg></span> NEXORA</a>
+    </div>
+  </header>
+
+  <div class="success-page">
+    <div class="success-card">
+      <div class="success-card__icon">
+        <svg class="icon icon-lg" viewBox="0 0 24 24" style="width:40px;height:40px"><path d="M20 6L9 17l-5-5" stroke-width="2.5"/></svg>
+      </div>
+      <h1>Order Confirmed!</h1>
+      <p>Thank you for shopping with NEXORA. Your order has been placed successfully and saved to your account.</p>
+      <div class="order-number" id="order-number">&nbsp;</div>
+      <p id="order-total" style="margin-top:-8px"></p>
+      <div class="flex gap-2" style="justify-content:center;flex-wrap:wrap">
+        <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+        <a href="account.html#orders" class="btn btn-secondary">View My Orders</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Show the order that the backend actually saved
+    (function () {
+      const number = new URLSearchParams(window.location.search).get('order');
+      const numberEl = document.getElementById('order-number');
+      if (!number || !API.isLoggedIn()) { numberEl.textContent = ''; return; }
+      numberEl.textContent = number;
+      API.getOrder(number)
+        .then(o => {
+          document.getElementById('order-total').textContent =
+            `${o.items.length} item${o.items.length !== 1 ? 's' : ''} · Total ${formatPrice(o.total)}`;
+        })
+        .catch(() => {});
+    })();
+  </script>
+</body>
+</html>

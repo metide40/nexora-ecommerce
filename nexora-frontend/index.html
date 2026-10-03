@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXORA — Discover Your Next Favorite</title>
+  <meta name="description" content="NEXORA — Premium online shopping for electronics, fashion, home & accessories. Free shipping, easy returns, and exceptional quality.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect class="logo__icon-bg" x="1.5" y="1.5" width="37" height="37" rx="11" stroke-width="1.5"/><path class="logo__icon-n" d="M13 28.5V11.5h2.9l7.4 12.6V11.5H26.5v17H23.6L16.2 15.9v12.6H13z"/></svg></span>
+        NEXORA
+      </a>
+      
+      <nav class="nav">
+        <a href="index.html" class="nav__link active">Home</a>
+        <a href="shop.html" class="nav__link">Shop</a>
+        <a href="#categories" class="nav__link">Categories</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="search-box">
+          <svg class="icon search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" class="search-input" placeholder="Search products..." aria-label="Search">
+        </div>
+        <a href="login.html" class="header__icon-btn" aria-label="Account">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="cart.html" class="header__icon-btn" aria-label="Cart">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" style="display:none">0</span>
+        </a>
+        <button class="mobile-toggle" aria-label="Menu">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-search">
+      <div class="search-box" style="position:relative;width:100%">
+        <svg class="icon search-icon" viewBox="0 0 24 24" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--slate)"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" class="search-input" placeholder="Search products..." style="width:100%;padding:0.75rem 1rem 0.75rem 2.75rem;border:1.5px solid var(--border);border-radius:var(--radius-md);background:var(--soft-white)">
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="shop.html" class="nav__link">Shop</a>
+      <a href="#categories" class="nav__link">Categories</a>
+      <a href="#about" class="nav__link">About</a>
+      <a href="#contact" class="nav__link">Contact</a>
+      <a href="login.html" class="nav__link">Account</a>
+      <a href="cart.html" class="nav__link">Cart</a>
+    </nav>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="hero__badge">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          New Season Collection · Up to 40% Off
+        </div>
+        <h1 class="hero__title">Discover Your<br><span class="hero__title-accent">Next Favorite</span></h1>
+        <p class="hero__subtitle">Curated essentials for modern living. Premium quality, thoughtful design, and prices that make sense — all in one place.</p>
+        <div class="hero__actions">
+          <a href="shop.html" class="btn btn-primary btn-lg hero-btn-primary">
+            <span>Shop Now</span>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#categories" class="btn btn-outline btn-lg hero-btn-secondary">
+            Explore Collections
+          </a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <strong>10k+</strong>
+            <span>Happy Customers</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <strong>500+</strong>
+            <span>Premium Products</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <strong>4.9</strong>
+            <span>Average Rating</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__image">
+        <div class="hero__image-wrapper">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900&h=900&fit=crop" alt="NEXORA Premium Fashion Collection">
+        </div>
+        <div class="hero__float hero__float--1">
+          <div class="hero__float-icon">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="hero__float-text">Secure Shopping<span>100% Protected</span></div>
+        </div>
+        <div class="hero__float hero__float--2">
+          <div class="hero__float-icon" style="background:var(--orange)">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <div class="hero__float-text">Free Shipping<span>Orders over $75</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <h2>Shop by Category</h2>
+        <p>Explore our carefully curated collections designed for every aspect of your life.</p>
+      </div>
+      <div class="grid grid-categories" id="categories-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="section" style="background:var(--white)">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Products</h2>
+        <p>Handpicked favorites that our customers love most.</p>
+        <a href="shop.html" class="view-all">View All Products <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="grid grid-4" id="featured-products">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo Banner -->
+  <section class="section">
+    <div class="container">
+      <div class="promo-banner">
+        <div class="promo-banner__content">
+          <h2>Big Deals. Bigger Smiles.</h2>
+          <p>Limited-time offers on top-rated products. Don't miss out on savings up to 40% off select items.</p>
+          <a href="shop.html?deals=1" class="btn btn-orange">Explore Deals</a>
+        </div>
+        <div class="promo-banner__countdown">
+          <div class="countdown-item">
+            <span class="countdown-item__value">03</span>
+            <span class="countdown-item__label">Days</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-item__value">14</span>
+            <span class="countdown-item__label">Hours</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-item__value">32</span>
+            <span class="countdown-item__label">Mins</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-item__value">08</span>
+            <span class="countdown-item__label">Secs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section benefits" id="about">
+    <div class="container">
+      <div class="benefits__grid">
+        <div class="benefit-card">
+          <div class="benefit-card__icon">
+            <svg class="icon icon-lg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h4>Free Shipping</h4>
+          <p>On all orders over $75. Fast delivery to your door.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">
+            <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4>Secure Shopping</h4>
+          <p>Your data is protected with industry-leading encryption.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">
+            <svg class="icon icon-lg" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+          </div>
+          <h4>Easy Returns</h4>
+          <p>30-day hassle-free returns. No questions asked.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">
+            <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h4>24/7 Support</h4>
+          <p>Our team is here around the clock to help you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Our Customers Say</h2>
+        <p>Real reviews from real people who love shopping at NEXORA.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="review-card">
+          <div class="review-card__header">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Sarah M." class="review-card__avatar">
+            <div>
+              <div class="review-card__name">Sarah M.</div>
+              <div class="review-card__role">Verified Buyer</div>
+            </div>
+          </div>
+          <p class="review-card__text">"The quality exceeded my expectations. Fast shipping and the packaging was beautiful. NEXORA has become my go-to store."</p>
+          <div class="review-card__stars">
+            <div class="stars">
+              <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-card__header">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="James K." class="review-card__avatar">
+            <div>
+              <div class="review-card__name">James K.</div>
+              <div class="review-card__role">Verified Buyer</div>
+            </div>
+          </div>
+          <p class="review-card__text">"Love the curated selection. Everything feels premium without the premium markup. Customer service was incredibly helpful too."</p>
+          <div class="review-card__stars">
+            <div class="stars">
+              <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-card__header">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Emily R." class="review-card__avatar">
+            <div>
+              <div class="review-card__name">Emily R.</div>
+              <div class="review-card__role">Verified Buyer</div>
+            </div>
+          </div>
+          <p class="review-card__text">"From browsing to unboxing, the experience is seamless. The product descriptions are accurate and the deals are genuinely good."</p>
+          <div class="review-card__stars">
+            <div class="stars">
+              <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Us -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get in Touch</h2>
+        <p>Questions, feedback, or support — we&rsquo;re here to help.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p>support@nexora.com</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h4>Call us</h4>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Visit us</h4>
+              <p>123 Commerce Ave, Suite 100, New York, NY 10001</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h4>Business hours</h4>
+              <p>Mon–Fri: 9am – 6pm EST<br>Sat–Sun: 10am – 4pm EST</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Name</label>
+            <input type="text" id="contact-name" class="form-input" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email</label>
+            <input type="email" id="contact-email" class="form-input" placeholder="you@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Message</label>
+            <textarea id="contact-message" class="form-input" rows="5" placeholder="How can we help?" required style="resize:vertical;min-height:140px"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send message</button>
+          <p class="form-success" id="contact-success" style="display:none;margin-top:12px;text-align:center">Thanks! We&rsquo;ll get back to you soon.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section section--before-footer">
+    <div class="container">
+      <div class="newsletter">
+        <h2>Stay in the Loop</h2>
+        <p>Subscribe for exclusive deals, new arrivals, and style inspiration delivered to your inbox.</p>
+        <form id="newsletter-form" class="newsletter__form">
+          <input type="email" placeholder="Enter your email" required aria-label="Email">
+          <button type="submit" class="btn btn-orange">Subscribe</button>
+        </form>
+        <div class="form-error" style="color:#fecaca;margin-top:8px"></div>
+        <div class="form-success" style="display:none;color:#a7f3d0;margin-top:8px"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo">
+            <span class="logo__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect class="logo__icon-bg" x="1.5" y="1.5" width="37" height="37" rx="11" stroke-width="1.5"/><path class="logo__icon-n" d="M13 28.5V11.5h2.9l7.4 12.6V11.5H26.5v17H23.6L16.2 15.9v12.6H13z"/></svg></span>
+            NEXORA
+          </a>
+          <p>Premium products for modern living. Thoughtfully curated, beautifully delivered.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter"><svg class="icon" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html">All Products</a></li>
+            <li><a href="shop.html?category=electronics">Electronics</a></li>
+            <li><a href="shop.html?category=fashion">Fashion</a></li>
+            <li><a href="shop.html?category=home">Home & Living</a></li>
+            <li><a href="shop.html?category=accessories">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 NEXORA. All rights reserved.</span>
+        <span>Built with care for modern shoppers.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

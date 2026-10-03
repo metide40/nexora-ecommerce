@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — NEXORA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect class="logo__icon-bg" x="1.5" y="1.5" width="37" height="37" rx="11" stroke-width="1.5"/><path class="logo__icon-n" d="M13 28.5V11.5h2.9l7.4 12.6V11.5H26.5v17H23.6L16.2 15.9v12.6H13z"/></svg></span>
+        NEXORA
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="shop.html" class="nav__link active">Shop</a>
+        <a href="index.html#categories" class="nav__link">Categories</a>
+        <a href="index.html#about" class="nav__link">About</a>
+        <a href="index.html#contact" class="nav__link">Contact</a>
+      </nav>
+      <div class="header__actions">
+        <div class="search-box">
+          <svg class="icon search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" class="search-input" placeholder="Search products..." aria-label="Search">
+        </div>
+        <a href="login.html" class="header__icon-btn" aria-label="Account">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="cart.html" class="header__icon-btn" aria-label="Cart">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" style="display:none">0</span>
+        </a>
+        <button class="mobile-toggle" aria-label="Menu">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <div class="mobile-search">
+      <div style="position:relative;width:100%">
+        <svg class="icon" viewBox="0 0 24 24" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--slate)"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" class="search-input" placeholder="Search products..." style="width:100%;padding:0.75rem 1rem 0.75rem 2.75rem;border:1.5px solid var(--border);border-radius:var(--radius-md);background:var(--soft-white)">
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="shop.html" class="nav__link">Shop</a>
+      <a href="index.html#categories" class="nav__link">Categories</a>
+      <a href="index.html#about" class="nav__link">About</a>
+      <a href="index.html#contact" class="nav__link">Contact</a>
+      <a href="login.html" class="nav__link">Account</a>
+      <a href="cart.html" class="nav__link">Cart</a>
+    </nav>
+  </div>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Shop All Products</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span>Shop</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="shop-layout">
+      <!-- Sidebar Filters -->
+      <aside class="shop-sidebar">
+        <div class="flex-between mb-3">
+          <h3>Filters</h3>
+          <button class="clear-filters" id="clear-filters">Clear All</button>
+        </div>
+
+        <div class="filter-group">
+          <h4>Category</h4>
+          <label class="filter-option">
+            <input type="checkbox" name="category" value="electronics"> Electronics
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="category" value="fashion"> Fashion
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="category" value="home"> Home & Living
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="category" value="accessories"> Accessories
+          </label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Price Range</h4>
+          <div class="price-range">
+            <input type="number" id="min-price" placeholder="Min" min="0">
+            <span>—</span>
+            <input type="number" id="max-price" placeholder="Max" min="0">
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Rating</h4>
+          <label class="filter-option">
+            <input type="radio" name="rating" value="4"> 4★ & above
+          </label>
+          <label class="filter-option">
+            <input type="radio" name="rating" value="3"> 3★ & above
+          </label>
+          <label class="filter-option">
+            <input type="radio" name="rating" value="0" checked> All Ratings
+          </label>
+        </div>
+      </aside>
+
+      <!-- Products -->
+      <div class="shop-main">
+        <div class="shop-toolbar">
+          <div class="flex gap-2" style="align-items:center">
+            <button class="btn btn-secondary btn-sm" id="filter-toggle" style="display:none">
+              <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
+              Filters
+            </button>
+            <span class="shop-count" id="product-count">0 products</span>
+          </div>
+          <div class="shop-sort">
+            <label for="sort-select">Sort by:</label>
+            <select id="sort-select">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid grid-3" id="shop-products">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" style="margin-top:var(--space-3xl)">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo"><span class="logo__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect class="logo__icon-bg" x="1.5" y="1.5" width="37" height="37" rx="11" stroke-width="1.5"/><path class="logo__icon-n" d="M13 28.5V11.5h2.9l7.4 12.6V11.5H26.5v17H23.6L16.2 15.9v12.6H13z"/></svg></span> NEXORA</a>
+          <p>Premium products for modern living.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html">All Products</a></li>
+            <li><a href="shop.html?category=electronics">Electronics</a></li>
+            <li><a href="shop.html?category=fashion">Fashion</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 NEXORA. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/shop.js"></script>
+  <script>
+    // Show filter toggle on mobile
+    if (window.innerWidth <= 768) {
+      const btn = document.getElementById('filter-toggle');
+      if (btn) btn.style.display = 'inline-flex';
+    }
+  </script>
+</body>
+</html>

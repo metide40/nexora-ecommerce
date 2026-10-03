@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account — NEXORA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/account.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo"><span class="logo__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect class="logo__icon-bg" x="1.5" y="1.5" width="37" height="37" rx="11" stroke-width="1.5"/><path class="logo__icon-n" d="M13 28.5V11.5h2.9l7.4 12.6V11.5H26.5v17H23.6L16.2 15.9v12.6H13z"/></svg></span> NEXORA</a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="shop.html" class="nav__link">Shop</a>
+        <a href="index.html#categories" class="nav__link">Categories</a>
+        <a href="index.html#about" class="nav__link">About</a>
+        <a href="index.html#contact" class="nav__link">Contact</a>
+      </nav>
+      <div class="header__actions">
+        <a href="login.html" class="header__icon-btn" aria-label="Account">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="cart.html" class="header__icon-btn" aria-label="Cart">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" style="display:none">0</span>
+        </a>
+        <button class="mobile-toggle" aria-label="Menu">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <nav class="nav">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="shop.html" class="nav__link">Shop</a>
+      <a href="login.html" class="nav__link">Account</a>
+      <a href="cart.html" class="nav__link">Cart</a>
+    </nav>
+  </div>
+
+  <div class="container account">
+    <aside class="account-nav" aria-label="Account menu">
+      <a href="#profile" class="account-nav__item" data-tab="profile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Profile</span></a>
+      <a href="#orders" class="account-nav__item" data-tab="orders"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/></svg><span>Orders</span><span class="account-nav__count" id="count-orders"></span></a>
+      <a href="#favorites" class="account-nav__item" data-tab="favorites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span>Favorites</span><span class="account-nav__count" id="count-favorites"></span></a>
+      <a href="#deals" class="account-nav__item" data-tab="deals"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>Deals</span></a>
+      <div class="account-nav__divider"></div>
+      <button type="button" class="account-nav__item account-nav__item--danger" data-logout><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Sign out</span></button>
+    </aside>
+
+    <main>
+      <!-- PROFILE -->
+      <section class="account-panel" id="panel-profile" hidden>
+        <div class="account-panel__head"><div><h2>Profile</h2><p>Manage your personal details and password.</p></div></div>
+        <div class="account-card profile-hero">
+          <div class="profile-hero__avatar" id="profile-avatar"></div>
+          <div>
+            <div class="profile-hero__name" id="profile-name"></div>
+            <div class="profile-hero__meta" id="profile-email"></div>
+            <div class="profile-hero__meta" id="profile-joined"></div>
+          </div>
+        </div>
+        <div class="account-cards">
+          <form class="account-card" id="profile-form" novalidate>
+            <h3>Personal information</h3>
+            <div class="form-group">
+              <label class="form-label" for="profile-name-input">Full name</label>
+              <input type="text" id="profile-name-input" class="form-input" autocomplete="name">
+              <div class="form-error" id="profile-name-input-error"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="profile-email-input">Email</label>
+              <input type="email" id="profile-email-input" class="form-input" disabled>
+              <p class="hint">Your email is your login, so it can't be changed here.</p>
+            </div>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </form>
+          <form class="account-card" id="password-form" novalidate>
+            <h3>Change password</h3>
+            <div class="form-group">
+              <label class="form-label" for="current-password">Current password</label>
+              <input type="password" id="current-password" class="form-input" autocomplete="current-password">
+              <div class="form-error" id="current-password-error"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="new-password">New password</label>
+              <input type="password" id="new-password" class="form-input" autocomplete="new-password" placeholder="At least 6 characters">
+              <div class="form-error" id="new-password-error"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="confirm-new-password">Confirm new password</label>
+              <input type="password" id="confirm-new-password" class="form-input" autocomplete="new-password">
+              <div class="form-error" id="confirm-new-password-error"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">Update password</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ORDERS -->
+      <section class="account-panel" id="panel-orders" hidden>
+        <div class="account-panel__head"><div><h2>Orders</h2><p>Track and review everything you've ordered.</p></div></div>
+        <div id="orders-list" class="orders-list"></div>
+      </section>
+
+      <!-- FAVORITES -->
+      <section class="account-panel" id="panel-favorites" hidden>
+        <div class="account-panel__head"><div><h2>Favorites</h2><p>Products you've saved for later.</p></div></div>
+        <div id="favorites-grid"></div>
+      </section>
+
+      <!-- DEALS -->
+      <section class="account-panel" id="panel-deals" hidden>
+        <div class="account-panel__head">
+          <div><h2>Deals</h2><p>Discounted products, biggest savings first.</p></div>
+          <a href="shop.html?deals=1" class="btn btn-secondary btn-sm">See all deals</a>
+        </div>
+        <div id="deals-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer" style="margin-top:var(--space-3xl)">
+    <div class="container">
+      <div class="footer__bottom" style="border:none;padding-top:0">
+        <span>&copy; 2026 NEXORA. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/account.js"></script>
+</body>
+</html>

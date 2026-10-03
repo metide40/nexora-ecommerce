@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — NEXORA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo"><span class="logo__icon" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect class="logo__icon-bg" x="1.5" y="1.5" width="37" height="37" rx="11" stroke-width="1.5"/><path class="logo__icon-n" d="M13 28.5V11.5h2.9l7.4 12.6V11.5H26.5v17H23.6L16.2 15.9v12.6H13z"/></svg></span> NEXORA</a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="shop.html" class="nav__link">Shop</a>
+        <a href="index.html#categories" class="nav__link">Categories</a>
+        <a href="index.html#about" class="nav__link">About</a>
+        <a href="index.html#contact" class="nav__link">Contact</a>
+      </nav>
+      <div class="header__actions">
+        <div class="search-box">
+          <svg class="icon search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" class="search-input" placeholder="Search products..." aria-label="Search">
+        </div>
+        <a href="login.html" class="header__icon-btn" aria-label="Account">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="cart.html" class="header__icon-btn" aria-label="Cart">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" style="display:none">0</span>
+        </a>
+        <button class="mobile-toggle" aria-label="Menu">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <nav class="nav">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="shop.html" class="nav__link">Shop</a>
+      <a href="login.html" class="nav__link">Account</a>
+      <a href="cart.html" class="nav__link">Cart</a>
+    </nav>
+  </div>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb" id="product-breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <a href="shop.html">Shop</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container product-detail">
+    <div class="product-detail__grid">
+      <!-- Gallery -->
+      <div class="product-gallery">
+        <div class="product-gallery__main">
+          <img id="main-image" src="" alt="Product">
+        </div>
+        <div class="product-gallery__thumbs" id="gallery-thumbs"></div>
+      </div>
+
+      <!-- Info -->
+      <div class="product-info">
+        <div id="product-badge" class="product-info__badge"></div>
+        <h1 id="product-name" class="product-info__name">Loading...</h1>
+        <div id="product-rating" class="product-info__rating"></div>
+        <div id="product-price" class="product-info__price"></div>
+        <p id="product-desc" class="product-info__desc"></p>
+
+        <div class="product-options" id="color-options"></div>
+        <div class="product-options" id="size-options"></div>
+
+        <div class="product-options">
+          <div class="product-options__label">Quantity</div>
+          <div class="qty-selector">
+            <button id="qty-minus">−</button>
+            <input type="number" id="qty-input" value="1" min="1">
+            <button id="qty-plus">+</button>
+          </div>
+        </div>
+
+        <div class="product-actions">
+          <button class="btn btn-primary btn-lg" id="add-to-cart-btn">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Add to Cart
+          </button>
+          <button class="btn btn-secondary btn-lg" id="wishlist-btn" aria-label="Wishlist">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+
+        <div class="product-specs">
+          <h4>Specifications</h4>
+          <table class="specs-table">
+            <tbody id="product-specs"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Related -->
+  <section class="section" style="background:var(--white)">
+    <div class="container">
+      <div class="section-header">
+        <h2>You May Also Like</h2>
+      </div>
+      <div class="grid grid-4" id="related-products"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="border:none;padding-top:0">
+        <span>&copy; 2026 NEXORA. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product-details.js"></script>
+</body>
+</html>
