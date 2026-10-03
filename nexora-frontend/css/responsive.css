@@ -281,3 +281,11 @@
     height: 70px;
   }
 }
+
+/* Very small phones (e.g. 320px): the header is crowded when logged in.
+   Hide the header logout icon; "Log out" is still in the mobile menu. */
+@media (max-width: 400px) {
+  .header__actions [data-logout] {
+    display: none;
+  }
+}
