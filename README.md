@@ -15,7 +15,7 @@ A complete online store built for an internship task: product listings, product 
 ## Tech stack
 | Layer | Technology |
 |---|---|
-| Frontend | HTML, CSS, JavaScript (no frameworks) |
+| Frontend | HTML5, CSS3, vanilla JavaScript |
 | Backend | Python, Django, Django REST Framework |
 | Database | PostgreSQL |
 | Auth | Token authentication, hashed passwords |
